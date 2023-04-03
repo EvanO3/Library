@@ -1,33 +1,28 @@
-let myLibrary =[];
+let myLibrary = [];
 
-function Book(title, author, pages, read){
-    this.title=title;
-    this.author=author;
-    this.pages =pages
-    this.read=read;
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
+Book.prototype.info = function () {
+  return `${this.title}, by ${this.author}, ${this.pages}, ${this.read}`;
+};
 
-Book.prototype.info = function(){
- return `${this.title}, by ${this.author}, ${this.pages}, ${this.read}`;
-   
-   
+function addBookToLibrary() {
+  let title = prompt("Please enter the Title of the Book");
+  let authour = prompt("Please enter the authour of the book");
+  let pages = prompt("Please enter the books pages");
+  let read = prompt("Please enter if you have read the book");
+  const book = new Book(title, authour, pages, read);
+  myLibrary.push(book);
 }
 
-
-function addBookToLibrary(){
-let title =prompt('Please enter the Title of the Book')
-let authour = prompt('Please enter the authour of the book')
-let pages = prompt("Please enter the books pages")
-let read =prompt('Please enter if you have read the book')
-const book = new Book(title, authour, pages, read)
-myLibrary.push(book)
-}
-
-
-function displayBook(){
-  for(let book of myLibrary){
-    console.log(book.name, book.authour, book.pages, book.read)
+function displayBook() {
+  for (let book of myLibrary) {
+    console.log(book.name, book.authour, book.pages, book.read);
   }
 }
 
