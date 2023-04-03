@@ -1,3 +1,5 @@
+let myLibrary =[];
+
 function Book(title, authour, pages, read){
     this.title=title;
     this.authour=authour;
@@ -12,6 +14,17 @@ Book.prototype.info = function(){
    
 }
 
-const books = new Book('The Hobbit', 'by J.R.R Tolkien', '295 pages', 'not read')
 
-console.log(books.info())
+function addBookToLibrary(){
+let title =prompt('Please enter the Title of the Book')
+let authour = prompt('Please enter the authour of the book')
+let pages = prompt("Please enter the books pages")
+let read =prompt('Please enter if you have read the book')
+const book = new Book(title, authour, pages, read)
+myLibrary.push(book)
+}
+
+
+
+addBookToLibrary()
+console.log(myLibrary)
