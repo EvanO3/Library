@@ -25,6 +25,9 @@ myLibrary.push(book)
 }
 
 
+function displayBook(){
+  for(let book of myLibrary){
+    console.log(book.name, book.authour, book.pages, book.read)
+  }
+}
 
-addBookToLibrary()
-console.log(myLibrary)
