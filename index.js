@@ -31,3 +31,5 @@ function displayBook(){
   }
 }
 
+//Add to the table using dom methods in javascript
+//add a new book button
