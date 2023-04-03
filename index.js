@@ -1,15 +1,15 @@
 let myLibrary =[];
 
-function Book(title, authour, pages, read){
+function Book(title, author, pages, read){
     this.title=title;
-    this.authour=authour;
+    this.author=author;
     this.pages =pages
     this.read=read;
 }
 
 
 Book.prototype.info = function(){
- return `${this.title}, by ${this.authour}, ${this.pages}, ${this.read}`;
+ return `${this.title}, by ${this.author}, ${this.pages}, ${this.read}`;
    
    
 }
