@@ -1,11 +1,9 @@
-.card{
-    border:1px solid black;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-    width: 20%;
-    margin:30px;
-    padding:50px;
-    display: flex;
-   flex-direction: column;
-
-
+.card {
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  width: 20%;
+  margin: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
 }

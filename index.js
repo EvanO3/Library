@@ -1,10 +1,28 @@
 let myLibrary = [
-  {title:'How to kill a mocking bird', author:' Harper Lee', pages:'342', read:'No'},
-  {title:'48 Law of power', author:'Robert Greene', pages:'400', read:'No'},
-  {title:'Perfect day to boss up', author:'Rick Ross', pages:'200', read:'No'},
-  {title:'Can not hurt me', author:'David Goggins', pages:'340', read:'Yes'}
-
-
+  {
+    title: "How to kill a mocking bird",
+    author: " Harper Lee",
+    pages: "342",
+    read: "No",
+  },
+  {
+    title: "48 Law of power",
+    author: "Robert Greene",
+    pages: "400",
+    read: "No",
+  },
+  {
+    title: "Perfect day to boss up",
+    author: "Rick Ross",
+    pages: "200",
+    read: "No",
+  },
+  {
+    title: "Can not hurt me",
+    author: "David Goggins",
+    pages: "340",
+    read: "Yes",
+  },
 ];
 
 function Book(title, author, pages, read) {
@@ -28,41 +46,32 @@ function addBookToLibrary() {
 }
 
 function displayBook() {
-
-
-  const container= document.getElementById('card')
-  container.innerHTML='';
-  myLibrary.forEach(Book => {
-     
-
+  const container = document.getElementById("card");
+  container.innerHTML = "";
+  myLibrary.forEach((Book) => {
     const card = document.createElement("div");
-    card.classList.add("card")
-    
-    const title = document.createElement("h1")
-    title.textContent=  `${Book.title}`
+    card.classList.add("card");
+
+    const title = document.createElement("h1");
+    title.textContent = `${Book.title}`;
 
     const author = document.createElement("p");
-    author.textContent =`${Book.author}`;
+    author.textContent = `${Book.author}`;
 
     const pages = document.createElement("p");
     pages.textContent = `${Book.pages}`;
 
+    const read = document.createElement("p");
+    read.textContent = Book.read;
 
-const read = document.createElement("p");
-  read.textContent = Book.read;
-
-
-  card.appendChild(title);
-  card.appendChild(author);
-  card.appendChild(pages);
-  card.appendChild(read);
-  container.appendChild(card)
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(pages);
+    card.appendChild(read);
+    container.appendChild(card);
   });
-
-
-
 }
 
 //Add to the table using dom methods in javascript
 //add a new book button
-displayBook()
+displayBook();
