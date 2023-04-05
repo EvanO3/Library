@@ -47,7 +47,7 @@ function addBookToLibrary() {
 
 function displayBook() {
   const container = document.getElementById("card");
-  container.innerHTML = "";
+  container.innerHTML = "hi";
   myLibrary.forEach((Book) => {
     const card = document.createElement("div");
     card.classList.add("card");
