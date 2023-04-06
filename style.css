@@ -1,9 +1,25 @@
 .card {
   border: 1px solid black;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   width: 20%;
   margin: 30px;
-  padding: 50px;
+  padding: 60px;
   display: flex;
   flex-direction: column;
+  gap:10px;
+}
+
+
+.card>h1,p{
+  text-align: center;
+  font-weight:bold;
+  color: black;
+  font-size:24px;
+  font-family:cursive;
+}
+
+.card>p{
+  font-size:15px;
+  font-weight:bold;
+  font-family:cursive;
 }
