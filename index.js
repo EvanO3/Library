@@ -47,7 +47,7 @@ function addBookToLibrary() {
 
 function displayBook() {
   const container = document.getElementById("card");
-  container.innerHTML = "hi";
+  container.innerHTML = "";
   myLibrary.forEach((Book) => {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -56,13 +56,13 @@ function displayBook() {
     title.textContent = `${Book.title}`;
 
     const author = document.createElement("p");
-    author.textContent = `${Book.author}`;
+    author.textContent = `Author: ${Book.author}`;
 
     const pages = document.createElement("p");
-    pages.textContent = `${Book.pages}`;
+    pages.textContent = `Pages: ${Book.pages}`;
 
     const read = document.createElement("p");
-    read.textContent = Book.read;
+    read.textContent = `have you read the book: ${Book.read}`;
 
     card.appendChild(title);
     card.appendChild(author);
