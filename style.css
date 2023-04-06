@@ -1,3 +1,9 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+
 .card {
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
@@ -22,4 +28,22 @@
   font-size:15px;
   font-weight:bold;
   font-family:cursive;
+}
+ 
+.newbook_btn {
+  position: absolute;
+  bottom: 100px; /* or any desired value */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+
+#btn{
+  border: 1px solid black;
+  border-radius:15px;
+  padding:20px;
 }
