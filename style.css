@@ -32,8 +32,8 @@
  
 .newbook_btn {
   position: absolute;
-  bottom: 100px; /* or any desired value */
-  left: 50%;
+  bottom: 90px; /* or any desired value */
+  left:85%;
   transform: translateX(-50%);
 }
 
@@ -43,7 +43,9 @@
 
 
 #btn{
-  border: 1px solid black;
-  border-radius:15px;
-  padding:20px;
+
+  border-radius: 50%;
+height:60px;
+width:60px;
+
 }
