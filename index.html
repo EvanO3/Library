@@ -10,13 +10,25 @@
     <title>Library</title>
   </head>
   <body>
-   
+    <form id = book-form style="display: none;">
+      <label for="Title">Title</label><br>
+    <input type="text" id="Title" name="Title"><br>
+
+    <label for="author">Author</label><br>
+    <input type="text" id="author" name="author"><br>
+
+    <label for="number-of-pages">Number of pages</label><br>
+    <input type="text" id="Number-of-pages" name="Number-of-pages"><br>
+
+    <label for="read">Have you read this book?</label><br>
+    <input type="checkbox" id="read" name ="read"><br>
+
+    <input type="submit">
+    </form>
+    
     <div class="newbook_btn">
       <button id ="btn">New Book</button>
-      <form id = book-form style="display: none;">
-        <label for="Book Name">Book Name</label><br>
-      <input type="text" id="Book-Name" name="Book-Name">
-      </form>
+      
     </div>
     <div id="card"></div>
     
