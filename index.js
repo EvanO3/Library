@@ -48,6 +48,16 @@ function displayBook() {
   });
 }
 
-//Add to the table using dom methods in javascript
-//add a new book button
+// adding the function that allows the form to show when button is clicked
+const btn = document.getElementById("btn")
+function showform(){
+  const form = document.getElementById("book-form");
+  form.style.display = "block"
+  btn.style.display = "nono"
+}
+
+
+
+
+btn.addEventListener('click', showform)
 displayBook();
