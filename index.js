@@ -1,29 +1,5 @@
-let myLibrary = [
-  {
-    title: "How to kill a mocking bird",
-    author: " Harper Lee",
-    pages: "342",
-    read: "No",
-  },
-  {
-    title: "48 Law of power",
-    author: "Robert Greene",
-    pages: "400",
-    read: "No",
-  },
-  {
-    title: "Perfect day to boss up",
-    author: "Rick Ross",
-    pages: "200",
-    read: "No",
-  },
-  {
-    title: "Can not hurt me",
-    author: "David Goggins",
-    pages: "340",
-    read: "Yes",
-  },
-];
+let myLibrary = [];
+
 
 function Book(title, author, pages, read) {
   this.title = title;
