@@ -41,6 +41,15 @@ function displayBook() {
     removeBtn.textContent = "X";
     removeBtn.addEventListener("click",()=>removeBooks(card))
 
+    const toggleReadBtn = document.createElement('button');
+    toggleReadBtn.classList.add('toggle-read-btn');
+    toggleReadBtn.textContent = Book.read ? 'Mark as unread' : 'Mark as read';
+    toggleReadBtn.addEventListener('click', () => isRead(Book));
+
+
+
+
+
     // thia removes the books when the button is clicked
     function removeBooks(card){
       const cardId = card.getAttribute('data-id');
@@ -55,6 +64,7 @@ function displayBook() {
     card.appendChild(pages);
     card.appendChild(read);
     card.appendChild(removeBtn);
+    card.appendChild(toggleReadBtn)
     container.appendChild(card);
     
   });
@@ -111,3 +121,12 @@ function addBookToLibrary() {
  
   myLibrary.push(book);
 }
+
+
+//checks if book is read
+function isRead(book) {
+  book.read = !book.read;
+  displayBook();
+}
+
+
