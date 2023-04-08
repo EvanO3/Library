@@ -14,12 +14,16 @@ Book.prototype.info = function () {
 
 
 
+
+
+
 function displayBook() {
   const container = document.getElementById("card");
   container.innerHTML = "";
-  myLibrary.forEach((Book) => {
+  myLibrary.forEach((Book, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
+    card.setAttribute('data-id', index)
 
     const title = document.createElement("h1");
     title.textContent = `${Book.title}`;
@@ -33,13 +37,29 @@ function displayBook() {
     const read = document.createElement("p");
     read.textContent = `have you read the book: ${Book.read}`;
 
+    const removeBtn= document.createElement("button");
+    removeBtn.textContent = "X";
+    removeBtn.addEventListener("click",()=>removeBooks(card))
+
+    // thia removes the books when the button is clicked
+    function removeBooks(card){
+      const cardId = card.getAttribute('data-id');
+      myLibrary.splice(cardId, 1);
+      displayBook()
+    }
+
+
+
     card.appendChild(title);
     card.appendChild(author);
     card.appendChild(pages);
     card.appendChild(read);
+    card.appendChild(removeBtn);
     container.appendChild(card);
+    
   });
 }
+
 
 // adding the function that allows the form to show when button is clicked
 const btn = document.getElementById("btn")
@@ -68,10 +88,9 @@ function hideForm(){
 }
 
 btn.addEventListener('click', showform)
-displayBook();
+
 
 const submit = document.querySelector('.submit-btn');
-
 function submitClick(event){
   event.preventDefault();
   addBookToLibrary()
