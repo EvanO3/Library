@@ -12,14 +12,7 @@ Book.prototype.info = function () {
   return `${this.title}, by ${this.author}, ${this.pages}, ${this.read}`;
 };
 
-function addBookToLibrary() {
-  let title = prompt("Please enter the Title of the Book");
-  let authour = prompt("Please enter the authour of the book");
-  let pages = prompt("Please enter the books pages");
-  let read = prompt("Please enter if you have read the book");
-  const book = new Book(title, authour, pages, read);
-  myLibrary.push(book);
-}
+
 
 function displayBook() {
   const container = document.getElementById("card");
@@ -50,14 +43,52 @@ function displayBook() {
 
 // adding the function that allows the form to show when button is clicked
 const btn = document.getElementById("btn")
+//this shows the form
 function showform(){
   const form = document.getElementById("book-form");
   form.style.display = "block"
-  btn.style.display = "nono"
+  hideBtn()
 }
 
+//this hides the buttons when
+function hideBtn(){
+  document.getElementById("btn").style.display = "none"
+}
 
+//shows the button
 
+function showbtn(){
+  document.getElementById("btn").style.display = "block"
+}
+
+//hides for
+function hideForm(){
+  document.getElementById("book-form").style.display = "none"
+  showbtn()
+}
 
 btn.addEventListener('click', showform)
 displayBook();
+
+const submit = document.querySelector('.submit-btn');
+
+function submitClick(event){
+  event.preventDefault();
+  addBookToLibrary()
+  displayBook()
+
+}
+
+submit.addEventListener('click', submitClick)
+
+// This is the method that must be edited
+function addBookToLibrary() {
+  let title = document.getElementById("Title").value;
+  let author = document.getElementById("author").value;
+  let pages = document.getElementById("Number-of-pages").value;
+  let read = document.getElementById("read").value;
+  const book = new Book(title, author, pages, read);
+  hideForm();
+ 
+  myLibrary.push(book);
+}
