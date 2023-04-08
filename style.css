@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   gap:10px;
+  background-color: white;
 }
 
 
@@ -49,3 +50,29 @@ height:60px;
 width:60px;
 
 }
+
+
+body{
+  background:#0a0a0a
+}
+
+.title-text{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  font-weight:bold;
+  font-size:60px;
+ margin:30px;
+  color:#0284c7;
+}
+
+#book-form{
+  color:white;
+
+}
+
+
+/** style page to look like proper website
+     fix form so it looks nice when it pops up
+*/
