@@ -128,5 +128,3 @@ function isRead(book) {
   book.read = !book.read;
   displayBook();
 }
-
-
