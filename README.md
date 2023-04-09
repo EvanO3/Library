@@ -1,0 +1,1 @@
+this project showcases my skill using javascript objects to allow for the user to input a book into a form and have it displayed on the screen. the form creates a book object which is then displayed via a card.
