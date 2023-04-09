@@ -20,13 +20,13 @@
     <form id = book-form style="display: none;">
       <h2 class = "form-title">New Book</h2>
       <label for="Title">Title</label><br>
-    <input type="text" id="Title" name="Title"><br>
+    <input type="text" id="Title" name="Title" required><br>
 
     <label for="author">Author</label><br>
-    <input type="text" id="author" name="author"><br>
+    <input type="text" id="author" name="author" required><br>
 
     <label for="number-of-pages">Number of pages</label><br>
-    <input type="text" id="Number-of-pages" name="Number-of-pages"><br>
+    <input type="numbers" id="Number-of-pages" name="Number-of-pages" min="2"  max="4" required><br>
 
     <label for="read">Have you read this book?</label><br>
     <input type="checkbox" id="read" name ="read"><br>
