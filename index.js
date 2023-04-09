@@ -38,7 +38,7 @@ function displayBook() {
     read.textContent = `have you read the book: ${Book.read}`;
 
     const removeBtn= document.createElement("button");
-    removeBtn.textContent = "X";
+    removeBtn.textContent = "Delete";
     removeBtn.addEventListener("click",()=>removeBooks(card))
 
     const toggleReadBtn = document.createElement('button');
@@ -105,7 +105,7 @@ function submitClick(event){
   event.preventDefault();
   addBookToLibrary()
   displayBook()
-
+  document.getElementById("book-form").reset();
 }
 
 submit.addEventListener('click', submitClick)
